@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    {include file="common/topadmin"}
+    {include file="common/leftadmin"}
+
+    <!-- Page Content -->
+    <div class="page-content">
+        <!-- Page Breadcrumb -->
+        <div class="page-breadcrumbs">
+            <ul class="breadcrumb">
+                <li><a href="/index/index/index.html">系统</a></li>
+                <li><a href="/index/admin/druglist.html">药品管理</a></li>
+                <li class="active">修改药品</li>
+            </ul>
+        </div>
+        <div class="page-body">
+            <button type="button" tooltip="取消" class="btn btn-sm btn-azure btn-addon" onclick="history.go(-1);"> <i
+                    class="fa fa-angle-left"></i>
+                取消</button>
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 col-xs-12">
+                    <div class="widget">
+                        <div class="widget-header bordered-bottom bordered-blue">
+                            <span class="widget-caption">修改药品</span>
+                        </div>
+                        <div class="widget-body">
+                            <div id="horizontal-form">
+                                <form class="form-horizontal" role="form" action="{:url('admin/updatedrug')}"
+                                    enctype="multipart/form-data" method="post">
+                                    <div class="form-group">
+                                        <label for="id" class="col-sm-2 control-label no-padding-right">ID</label>
+                                        <div class="col-sm-6">
+                                            <input class="form-control" id="id" placeholder="" name="id" required=""
+                                                type="text" value="{$result.id}" readonly="true">
+                                        </div>
+                                        <p class="help-block col-sm-4 red">&nbsp;</p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="drugname" class="col-sm-2 control-label no-padding-right">名称</label>
+                                        <div class="col-sm-6">
+                                            <input class="form-control" id="drugname" placeholder="" name="drugname"
+                                                required="" type="text" value="{$result.drugname}">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="image" class="col-sm-2 control-label no-padding-right">图片</label>
+                                        <div class="col-sm-6">
+                                            <input class="form-control" id="image" placeholder="" name="image"
+                                                required="" type="file" style="display:inline;">
+                                            <img src="__IMG__{$result.image}" width="30" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="num" class="col-sm-2 control-label no-padding-right">数量</label>
+                                        <div class="col-sm-6">
+                                            <input class="form-control" id="num" placeholder="" name="num" required=""
+                                                type="text" value="{$result.num}">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="attribute"
+                                            class="col-sm-2 control-label no-padding-right">属性</label>
+                                        <div class="col-sm-6">
+                                            <textarea class="form-control" id="attribute" placeholder=""
+                                                name="attribute" required="">{$result.attribute}</textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-offset-2 col-sm-10">
+                                            <button type="submit" class="btn btn-default">确认修改信息</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</body>
+
+</html>

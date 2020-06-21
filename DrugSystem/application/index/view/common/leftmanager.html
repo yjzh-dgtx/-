@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>ThinkPHP</title>
+
+    <meta name="description" content="Dashboard" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!--Basic Styles-->
+    <link href="__PUBLIC__/css/bootstrap.css" rel="stylesheet" />
+    <link href="__PUBLIC__/css/font-awesome.css" rel="stylesheet" />
+    <link href="__PUBLIC__/css/weather-icons.css" rel="stylesheet" />
+
+    <!--Beyond styles-->
+    <link id="beyond-link" href="__PUBLIC__/css/beyond.css" rel="stylesheet" type="text/css" />
+    <link href="__PUBLIC__/css/demo.css" rel="stylesheet" />
+    <link href="__PUBLIC__/css/typicons.css" rel="stylesheet" />
+    <link href="__PUBLIC__/css/animate.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="main-container container-fluid">
+        <div class="page-container">
+            <!-- Page Sidebar -->
+            <div class="page-sidebar" id="sidebar">
+                <!-- Page Sidebar Header-->
+                <div class="sidebar-header-wrapper">
+                    <input class="searchinput" type="text" />
+                    <i class="searchicon fa fa-search"></i>
+                    <div class="searchhelper">
+                        Search Reports, Charts, Emails or Notifications
+                    </div>
+                </div>
+                <!-- /Page Sidebar Header -->
+                <!-- Sidebar Menu -->
+                <ul class="nav sidebar-menu">
+                    <!--Dashboard-->
+                    <li>
+                        <a href="#" class="menu-dropdown">
+                            <i class="menu-icon fa fa-user"></i>
+                            <span class="menu-text">药品库存</span>
+                            <i class="menu-expand"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="/index/manager/inventorylist.html">
+                                    <span class="menu-text"> 库存查询 </span>
+                                    <i class="menu-expand"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#" class="menu-dropdown">
+                            <i class="menu-icon fa fa-gear"></i>
+                            <span class="menu-text">系统</span>
+                            <i class="menu-expand"></i>
+                        </a>
+                        <ul class="submenu">
+                            <li>
+                                <a href="/index/index/indexmanager.html">
+                                    <span class="menu-text"> 成员简介 </span>
+                                    <i class="menu-expand"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <!-- /Sidebar Menu -->
+            </div>
+            <!-- /Page Sidebar -->
+        </div>
+    </div>
+    <!--Basic Scripts-->
+    <script src="__PUBLIC__/js/jquery_002.js"></script>
+    <script src="__PUBLIC__/js/bootstrap.js"></script>
+    <script src="__PUBLIC__/js/jquery.js"></script>
+    <!--Beyond Scripts-->
+    <script src="__PUBLIC__/js/beyond.js"></script>
+</body>
+
+</html>

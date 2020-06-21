@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<script src="__PUBLIC__/js/ueditor.config.js"></script>
+<script src="__PUBLIC__/js/ueditor.all.min.js"></script>
+<script src="__PUBLIC__/js/lang/zh-cn/zh-cn.js"></script>
+
+<body>
+    {include file="common/topuser"}
+    {include file="common/leftuser"}
+    <!-- Page Content -->
+    <div class="page-content">
+        <!-- Page Breadcrumb -->
+        <div class="page-breadcrumbs">
+            <ul class="breadcrumb">
+                <li><a href="/index/index/indexuser.html">系统</a></li>
+                <li><a href="/index/user/druginquirylist.html">药品查询</a></li>
+                <li class="active">出库统计</li>
+            </ul>
+        </div>
+        <div class="page-body">
+            <button type="button" tooltip="取消" class="btn btn-sm btn-azure btn-addon" onclick="history.go(-1);"> <i
+                    class="fa fa-angle-left"></i>
+                取消</button>
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 col-xs-12">
+                    <div class="widget">
+                        <div class="widget-header bordered-bottom bordered-blue">
+                            <span class="widget-caption">药品出库</span>
+                        </div>
+                        <div class="widget-body">
+                            <div class="flip-scroll">
+                                <table class="table table-bordered table-hover">
+                                    <thead class="">
+                                        <tr>
+                                            <th class="text-center">ID</th>
+                                            <th class="text-center">药品名称</th>
+                                            <th class="text-center">图片</th>
+                                            <th class="text-center">数量</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {foreach name="result" item="vo"}
+                                        <tr>
+                                            <td align="center">{$vo.id}</td>
+                                            <td align="center">{$vo.drugname}</td>
+                                            <td align="center"><img src="__IMG__{$vo.image}" height="40" width="40" />
+                                            </td>
+                                            <td align="center">{$vo.num}</td>
+                                        </tr>
+                                        {/foreach}
+                                    </tbody>
+                                </table>
+                                <div class="form-group">
+                                    <div class="col-sm-offset-2 col-sm-10">
+                                        <button type="submit" class="btn btn-default">确认出库</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div id="horizontal-form">
+                                <form class="form-horizontal" role="form" action="{:url('user/update')}"
+                                    enctype="multipart/form-data" method="post">
+                                    <div class="form-group">
+                                        <label for="id" class="col-sm-2 control-label no-padding-right">ID</label>
+                                        <div class="col-sm-6">
+                                            <input class="form-control" id="id" placeholder="" name="id" required=""
+                                                type="text" value="{$result.id}" readonly="true">
+                                        </div>
+                                        <p class="help-block col-sm-4 red">&nbsp;</p>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="drugname" class="col-sm-2 control-label no-padding-right">名称</label>
+                                        <div class="col-sm-6">
+                                            <input class="form-control" id="drugname" placeholder="" name="drugname"
+                                                required="" type="text" value="{$result.drugname}" readonly="true">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="image" class="col-sm-2 control-label no-padding-right">图片</label>
+                                        <div class="col-sm-6">
+                                            <input class="form-control" id="image" placeholder="" name="image"
+                                                required="" type="text" value="{$result.image}" readonly="true">
+                                            <img src="__IMG__{$result.image}" width="30" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="num" class="col-sm-2 control-label no-padding-right">数量</label>
+                                        <div class="col-sm-6">
+                                            <input class="form-control" id="num" placeholder="" name="num" required=""
+                                                type="number" value="{$result.num}" readonly="true">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="attribute"
+                                            class="col-sm-2 control-label no-padding-right">属性</label>
+                                        <div class="col-md-6">
+                                            <textarea class="form-control" id="attribute" placeholder=""
+                                                name="attribute" required=""
+                                                readonly="true">{$result.attribute}</textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="num2" class="col-sm-2 control-label no-padding-right">添加数量</label>
+                                        <div class="col-sm-6">
+                                            <input class="form-control" id="num2" placeholder="" name="num2" required=""
+                                                type="number" style="display:inline;">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-offset-2 col-sm-10">
+                                            <button type="submit" class="btn btn-default">确认出库</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+</body>
+
+</html>
