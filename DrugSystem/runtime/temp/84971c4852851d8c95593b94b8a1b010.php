@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:84:"D:\devTool\phpStudy\WWW\DrugSystem\public/../application/index\view\index\index.html";i:1592197404;s:78:"D:\devTool\phpStudy\WWW\DrugSystem\application\index\view\common\topadmin.html";i:1592197255;s:79:"D:\devTool\phpStudy\WWW\DrugSystem\application\index\view\common\leftadmin.html";i:1592197207;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:84:"D:\devTool\phpStudy\WWW\DrugSystem\public/../application/index\view\index\index.html";i:1592197404;s:78:"D:\devTool\phpStudy\WWW\DrugSystem\application\index\view\common\topadmin.html";i:1592197255;s:79:"D:\devTool\phpStudy\WWW\DrugSystem\application\index\view\common\leftadmin.html";i:1593313045;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -138,12 +138,6 @@
             </a>
             <ul class="submenu">
               <li>
-                <a href="/index/admin/listadmin.html">
-                  <span class="menu-text"> 系统管理员列表 </span>
-                  <i class="menu-expand"></i>
-                </a>
-              </li>
-              <li>
                 <a href="/index/admin/listmanager.html">
                   <span class="menu-text"> 库存管理员管理 </span>
                   <i class="menu-expand"></i>
@@ -181,6 +175,12 @@
               <i class="menu-expand"></i>
             </a>
             <ul class="submenu">
+              <li>
+                <a href="/index/admin/listadmin.html">
+                  <span class="menu-text"> 系统管理员列表 </span>
+                  <i class="menu-expand"></i>
+                </a>
+              </li>
               <li>
                 <a href="/index/index/index.html">
                   <span class="menu-text"> 成员简介 </span>

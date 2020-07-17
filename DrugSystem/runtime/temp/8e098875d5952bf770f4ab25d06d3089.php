@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:86:"D:\devTool\phpStudy\WWW\DrugSystem\public/../application/index\view\user\userinfo.html";i:1592726531;s:77:"D:\devTool\phpStudy\WWW\DrugSystem\application\index\view\common\topuser.html";i:1592725117;s:78:"D:\devTool\phpStudy\WWW\DrugSystem\application\index\view\common\leftuser.html";i:1592727939;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:86:"D:\devTool\phpStudy\WWW\DrugSystem\public/../application/index\view\user\userinfo.html";i:1593617562;s:77:"D:\devTool\phpStudy\WWW\DrugSystem\application\index\view\common\topuser.html";i:1592725117;s:78:"D:\devTool\phpStudy\WWW\DrugSystem\application\index\view\common\leftuser.html";i:1592727939;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -200,7 +200,7 @@
                         </div>
                         <div class="widget-body">
                             <div id="horizontal-form">
-                                <form class="form-horizontal" role="form" action="<?php echo url('admin/update'); ?>"
+                                <form class="form-horizontal" role="form" action="<?php echo url('user/updateuser'); ?>"
                                     enctype="multipart/form-data" method="post">
                                     <div class="form-group">
                                         <label for="id" class="col-sm-2 control-label no-padding-right">ID</label>
@@ -222,7 +222,7 @@
                                         <label for="image" class="col-sm-2 control-label no-padding-right">头像</label>
                                         <div class="col-sm-6">
                                             <input class="form-control" id="image" placeholder="" name="image"
-                                                required="" type="file" style="display:inline;">
+                                                type="file" style="display:inline;">
                                             <img src="http://localhost.drug/static/<?php echo $result['image']; ?>" width="30" />
                                         </div>
                                     </div>
@@ -232,7 +232,7 @@
                                             class="col-sm-2 control-label no-padding-right">用户名</label>
                                         <div class="col-sm-6">
                                             <input class="form-control" id="username" placeholder="" name="username"
-                                                required="" type="text" value="<?php echo $result['username']; ?>">
+                                                type="text" value="<?php echo $result['username']; ?>">
                                         </div>
                                     </div>
                                     <div class="form-group">

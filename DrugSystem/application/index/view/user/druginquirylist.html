@@ -5,6 +5,7 @@
     {include file="common/topuser"}
     {include file="common/leftuser"}
     <link href="__PUBLIC__/css/css.css" rel="stylesheet" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="__PUBLIC__/js/js.js"></script>
     <!-- Page Content -->
     <div class="page-content">
@@ -15,6 +16,7 @@
                 <li class="active">药品查询</li>
             </ul>
         </div>
+
         <div class="page-body">
             <div class="row">
                 <div class="col-lg-12 col-sm-12 col-xs-12">
@@ -42,16 +44,16 @@
                                             <td align="center">{$vo.num}</td>
                                             <td align="center">{$vo.attribute}</td>
                                             <td align="center">
-                                                <!-- <a href="{:url('user/drugoutfo',array('id'=>$vo['id']))}"
-                                                    class="btn btn-primary btn-sm shiny">
-                                                    <i class="fa fa-plus"></i> 入库管理
-                                                </a> -->
                                                 <a>
-                                                    <i><span id="num-jian" class="fa fa-minus-square-o"
+                                                    <i><span id="sub" onclick="onClickSub('#in-{$vo.id}', '{$vo.id}')"
+                                                            class="fa fa-minus-square-o"
                                                             style="font-size:36px"></span></i>
-                                                    <i><input type="text" class="input-num" id="input-num" value="0" />
+                                                    <i><input type="text" class="in" id="in-{$vo.id}"
+                                                            onchange="onChangeNum('{$vo.id}', this.value)"
+                                                            value="{$vo.count}" />
                                                     </i>
-                                                    <i><span id="num-jia" class="fa fa-plus-square-o"
+                                                    <i><span id="add" onclick="onClickAdd('#in-{$vo.id}', '{$vo.id}')"
+                                                            class="fa fa-plus-square-o"
                                                             style="font-size:36px"></span></i>
                                                 </a>
                                             </td>
@@ -59,6 +61,9 @@
                                         {/foreach}
                                     </tbody>
                                 </table>
+                                <a class="btn btn-primary btn-sm shiny" href="
+                                    {:url('user/drugoutfo')}"> <i class="fa fa-align-justify"></i> 出库统计
+                                </a>
                             </div>
                         </div>
                     </div>

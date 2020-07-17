@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:87:"D:\devTool\phpStudy\WWW\DrugSystem\public/../application/index\view\user\drugoutfo.html";i:1592728165;s:77:"D:\devTool\phpStudy\WWW\DrugSystem\application\index\view\common\topuser.html";i:1592725117;s:78:"D:\devTool\phpStudy\WWW\DrugSystem\application\index\view\common\leftuser.html";i:1592727939;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:87:"D:\devTool\phpStudy\WWW\DrugSystem\public/../application/index\view\user\drugoutfo.html";i:1593322236;s:77:"D:\devTool\phpStudy\WWW\DrugSystem\application\index\view\common\topuser.html";i:1592725117;s:78:"D:\devTool\phpStudy\WWW\DrugSystem\application\index\view\common\leftuser.html";i:1592727939;}*/ ?>
 <!DOCTYPE html>
 <html>
 <script src="http://localhost.drug/static/index/js/ueditor.config.js"></script>
@@ -198,65 +198,39 @@
                 <div class="col-lg-12 col-sm-12 col-xs-12">
                     <div class="widget">
                         <div class="widget-header bordered-bottom bordered-blue">
-                            <span class="widget-caption">新增药品</span>
+                            <span class="widget-caption">出库统计</span>
                         </div>
                         <div class="widget-body">
-                            <div id="horizontal-form">
-                                <form class="form-horizontal" role="form" action="<?php echo url('user/update'); ?>"
-                                    enctype="multipart/form-data" method="post">
-                                    <div class="form-group">
-                                        <label for="id" class="col-sm-2 control-label no-padding-right">ID</label>
-                                        <div class="col-sm-6">
-                                            <input class="form-control" id="id" placeholder="" name="id" required=""
-                                                type="text" value="<?php echo $result['id']; ?>" readonly="true">
-                                        </div>
-                                        <p class="help-block col-sm-4 red">&nbsp;</p>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="drugname" class="col-sm-2 control-label no-padding-right">名称</label>
-                                        <div class="col-sm-6">
-                                            <input class="form-control" id="drugname" placeholder="" name="drugname"
-                                                required="" type="text" value="<?php echo $result['drugname']; ?>" readonly="true">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="image" class="col-sm-2 control-label no-padding-right">图片</label>
-                                        <div class="col-sm-6">
-                                            <input class="form-control" id="image" placeholder="" name="image"
-                                                required="" type="text" value="<?php echo $result['image']; ?>" readonly="true">
-                                            <img src="http://localhost.drug/static/<?php echo $result['image']; ?>" width="30" />
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="num" class="col-sm-2 control-label no-padding-right">数量</label>
-                                        <div class="col-sm-6">
-                                            <input class="form-control" id="num" placeholder="" name="num" required=""
-                                                type="number" value="<?php echo $result['num']; ?>" readonly="true">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="attribute"
-                                            class="col-sm-2 control-label no-padding-right">属性</label>
-                                        <div class="col-md-6">
-                                            <textarea class="form-control" id="attribute" placeholder=""
-                                                name="attribute" required=""
-                                                readonly="true"><?php echo $result['attribute']; ?></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="num2" class="col-sm-2 control-label no-padding-right">添加数量</label>
-                                        <div class="col-sm-6">
-                                            <input class="form-control" id="num2" placeholder="" name="num2" required=""
-                                                type="number" style="display:inline;">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="col-sm-offset-2 col-sm-10">
-                                            <button type="submit" class="btn btn-default">确认出库</button>
-                                        </div>
-                                    </div>
-                                </form>
-                            </div>
+                            <form class="form-horizontal" role="form" action="<?php echo url('user/update'); ?>"
+                                enctype="multipart/form-data" method="post">
+                                <div class="flip-scroll">
+                                    <table class="table table-bordered table-hover">
+                                        <thead class="">
+                                            <tr>
+                                                <th class="text-center">ID</th>
+                                                <th class="text-center">药品名称</th>
+                                                <th class="text-center">图片</th>
+                                                <th class="text-center">数量</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <?php if(is_array($result) || $result instanceof \think\Collection || $result instanceof \think\Paginator): if( count($result)==0 ) : echo "" ;else: foreach($result as $key=>$vo): ?>
+                                            <tr>
+                                                <td align="center"><?php echo $vo['id']; ?></td>
+                                                <td align="center"><?php echo $vo['drugname']; ?></td>
+                                                <td align="center"><img src="http://localhost.drug/static/<?php echo $vo['image']; ?>" height="40"
+                                                        width="40" />
+                                                </td>
+                                                <td align="center"><?php echo $vo['count']; ?></td>
+                                            </tr>
+                                            <?php endforeach; endif; else: echo "" ;endif; ?>
+                                        </tbody>
+                                    </table>
+                                    <button type="submit" class="btn btn-primary btn-sm shiny">
+                                        <i class=" fa fa-align-justify"></i>确认出库
+                                    </button>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>

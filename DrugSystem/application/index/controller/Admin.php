@@ -81,13 +81,13 @@ class Admin extends Controller
             }
             if (db('login')->update($data)) {
                 if ($data['type']==1) {
-                    return $this->success('系统管理员修改成功', 'Admin/listadmin');
+                    return $this->success('系统管理员修改成功', 'Admin/modifyuserinfo');
                 }
                 if ($data['type']==2) {
                     return $this->success('库存管理员修改成功', 'Admin/listmanager');
                 }
                 if ($data['type']==3) {
-                    return $this->success('用户修改成功', 'Admin/listuser');
+                    return $this->success('用户修改成功', 'Admin/listuser', array('id'=>input('id')));
                 }
             } else {
                 return $this->error('修改失败');

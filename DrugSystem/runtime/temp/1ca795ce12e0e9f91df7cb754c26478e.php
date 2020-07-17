@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:93:"D:\devTool\phpStudy\WWW\DrugSystem\public/../application/index\view\user\druginquirylist.html";i:1592730939;s:77:"D:\devTool\phpStudy\WWW\DrugSystem\application\index\view\common\topuser.html";i:1592725117;s:78:"D:\devTool\phpStudy\WWW\DrugSystem\application\index\view\common\leftuser.html";i:1592727939;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:93:"D:\devTool\phpStudy\WWW\DrugSystem\public/../application/index\view\user\druginquirylist.html";i:1593865166;s:77:"D:\devTool\phpStudy\WWW\DrugSystem\application\index\view\common\topuser.html";i:1592725117;s:78:"D:\devTool\phpStudy\WWW\DrugSystem\application\index\view\common\leftuser.html";i:1592727939;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -178,6 +178,7 @@
 
 </html>
     <link href="http://localhost.drug/static/index/css/css.css" rel="stylesheet" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="http://localhost.drug/static/index/js/js.js"></script>
     <!-- Page Content -->
     <div class="page-content">
@@ -188,6 +189,7 @@
                 <li class="active">药品查询</li>
             </ul>
         </div>
+
         <div class="page-body">
             <div class="row">
                 <div class="col-lg-12 col-sm-12 col-xs-12">
@@ -215,16 +217,16 @@
                                             <td align="center"><?php echo $vo['num']; ?></td>
                                             <td align="center"><?php echo $vo['attribute']; ?></td>
                                             <td align="center">
-                                                <!-- <a href="<?php echo url('user/drugoutfo',array('id'=>$vo['id'])); ?>"
-                                                    class="btn btn-primary btn-sm shiny">
-                                                    <i class="fa fa-plus"></i> 入库管理
-                                                </a> -->
                                                 <a>
-                                                    <i><span id="num-jian" class="fa fa-minus-square-o"
+                                                    <i><span id="sub" onclick="onClickSub('#in-<?php echo $vo['id']; ?>', '<?php echo $vo['id']; ?>')"
+                                                            class="fa fa-minus-square-o"
                                                             style="font-size:36px"></span></i>
-                                                    <i><input type="text" class="input-num" id="input-num" value="0" />
+                                                    <i><input type="text" class="in" id="in-<?php echo $vo['id']; ?>"
+                                                            onchange="onChangeNum('<?php echo $vo['id']; ?>', this.value)"
+                                                            value="<?php echo $vo['count']; ?>" />
                                                     </i>
-                                                    <i><span id="num-jia" class="fa fa-plus-square-o"
+                                                    <i><span id="add" onclick="onClickAdd('#in-<?php echo $vo['id']; ?>', '<?php echo $vo['id']; ?>')"
+                                                            class="fa fa-plus-square-o"
                                                             style="font-size:36px"></span></i>
                                                 </a>
                                             </td>
@@ -232,6 +234,9 @@
                                         <?php endforeach; endif; else: echo "" ;endif; ?>
                                     </tbody>
                                 </table>
+                                <a class="btn btn-primary btn-sm shiny" href="
+                                    <?php echo url('user/drugoutfo'); ?>"> <i class="fa fa-align-justify"></i> 出库统计
+                                </a>
                             </div>
                         </div>
                     </div>

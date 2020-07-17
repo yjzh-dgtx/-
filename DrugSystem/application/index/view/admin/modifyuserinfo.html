@@ -41,7 +41,7 @@
                                         <label for="type" class="col-sm-2 control-label no-padding-right">等级</label>
                                         <div class="col-sm-6">
                                             <input class="form-control" id="type" placeholder="" name="type" required=""
-                                                type="number" value="{$result.type}">
+                                                type="number" value="{$result.type}" readonly="true">
                                         </div>
                                     </div>
 
@@ -49,7 +49,7 @@
                                         <label for="image" class="col-sm-2 control-label no-padding-right">头像</label>
                                         <div class="col-sm-6">
                                             <input class="form-control" id="image" placeholder="" name="image"
-                                                required="" type="file" style="display:inline;">
+                                                type="file" style="display:inline;">
                                             <img src="__IMG__{$result.image}" width="30" />
                                         </div>
                                     </div>

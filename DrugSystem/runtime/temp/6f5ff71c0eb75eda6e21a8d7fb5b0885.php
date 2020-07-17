@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:89:"D:\devTool\phpStudy\WWW\DrugSystem\public/../application/index\view\manager\druginfo.html";i:1592727773;s:80:"D:\devTool\phpStudy\WWW\DrugSystem\application\index\view\common\topmanager.html";i:1592724198;s:81:"D:\devTool\phpStudy\WWW\DrugSystem\application\index\view\common\leftmanager.html";i:1592727808;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:89:"D:\devTool\phpStudy\WWW\DrugSystem\public/../application/index\view\manager\druginfo.html";i:1593322238;s:80:"D:\devTool\phpStudy\WWW\DrugSystem\application\index\view\common\topmanager.html";i:1592724198;s:81:"D:\devTool\phpStudy\WWW\DrugSystem\application\index\view\common\leftmanager.html";i:1592727808;}*/ ?>
 <!DOCTYPE html>
 <html>
 <script src="http://localhost.drug/static/index/js/ueditor.config.js"></script>

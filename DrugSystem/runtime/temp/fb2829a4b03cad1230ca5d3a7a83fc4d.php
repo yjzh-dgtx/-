@@ -1,4 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:92:"D:\devTool\phpStudy\WWW\DrugSystem\public/../application/index\view\manager\managerinfo.html";i:1592724066;s:80:"D:\devTool\phpStudy\WWW\DrugSystem\application\index\view\common\topmanager.html";i:1592724198;s:81:"D:\devTool\phpStudy\WWW\DrugSystem\application\index\view\common\leftmanager.html";i:1592727808;}*/ ?>
+<?php if (!defined('THINK_PATH')) exit(); /*a:3:{s:92:"D:\devTool\phpStudy\WWW\DrugSystem\public/../application/index\view\manager\managerinfo.html";i:1593617916;s:80:"D:\devTool\phpStudy\WWW\DrugSystem\application\index\view\common\topmanager.html";i:1592724198;s:81:"D:\devTool\phpStudy\WWW\DrugSystem\application\index\view\common\leftmanager.html";i:1592727808;}*/ ?>
 <!DOCTYPE html>
 <html>
 
@@ -200,7 +200,7 @@
                         </div>
                         <div class="widget-body">
                             <div id="horizontal-form">
-                                <form class="form-horizontal" role="form" action="<?php echo url('admin/update'); ?>"
+                                <form class="form-horizontal" role="form" action="<?php echo url('manager/updatemanager'); ?>"
                                     enctype="multipart/form-data" method="post">
                                     <div class="form-group">
                                         <label for="id" class="col-sm-2 control-label no-padding-right">ID</label>
@@ -222,7 +222,7 @@
                                         <label for="image" class="col-sm-2 control-label no-padding-right">头像</label>
                                         <div class="col-sm-6">
                                             <input class="form-control" id="image" placeholder="" name="image"
-                                                required="" type="file" style="display:inline;">
+                                                type="file" style="display:inline;">
                                             <img src="http://localhost.drug/static/<?php echo $result['image']; ?>" width="30" />
                                         </div>
                                     </div>
